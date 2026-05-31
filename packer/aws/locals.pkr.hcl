@@ -1,0 +1,1 @@
+../_shared/locals.pkr.hcl

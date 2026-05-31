@@ -1,0 +1,1 @@
+../_shared/variables.pkr.hcl

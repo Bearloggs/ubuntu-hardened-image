@@ -1,0 +1,14 @@
+#cloud-config
+# Copy to instance.local.yaml (gitignored): cp cloud-init/instance.example.yaml cloud-init/instance.local.yaml
+# Proxmox: paste this file (or ssh_authorized_keys only) in the VM Cloud-Init UI.
+hostname: my-host
+
+ssh_authorized_keys:
+  - ssh-ed25519 AAAA...replace-with-your-public-key... operator@laptop
+
+# For NoCloud/CD only (omit on Proxmox — PVE assigns instance-id):
+# instance-id: iid-myhost-001
+# local-hostname: my-host
+
+package_update: false
+package_upgrade: false

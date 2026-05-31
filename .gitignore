@@ -1,0 +1,35 @@
+# Operator config (copy from *.example)
+packer/local.pkrvars.hcl
+cloud-init/instance.local.yaml
+cloud-init/nocloud/.identity-password-hash
+cloud-init/packer/
+
+# Packer cache and downloaded install media
+packer_cache/
+*.iso
+*.img
+
+# Packer crash log
+crash.log
+
+# Built images and Packer outputs
+output-*/
+*.box
+*.qcow2
+*.qcow2c
+*.vmdk
+*.vdi
+*.ova
+packer-manifest*.json
+
+# Environment and cloud credential files
+.env
+.env.*
+.aws/
+aws-credentials
+credentials
+secrets/
+
+# Packer build SSH key
+packer/build-key
+packer/build-key.pub

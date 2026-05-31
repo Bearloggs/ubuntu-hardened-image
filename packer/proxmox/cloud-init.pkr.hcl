@@ -1,0 +1,1 @@
+../_shared/cloud-init.pkr.hcl

@@ -1,0 +1,38 @@
+# Copy to packer/local.pkrvars.hcl (gitignored): make vars
+# Uncomment and edit the section for the platform you build.
+
+# --- Shared (all non-AWS builders) ---
+build_memory_mb = 4096
+build_cpus      = 2
+ami_name        = "ubuntu-hardened"
+ubuntu_version  = "24.04"
+install_ssm_agent = false
+initialize_aide   = false
+
+# --- Proxmox ---
+# proxmox_url                      = "https://pve.example.com:8006/api2/json"
+# proxmox_username                 = "root@pam"
+# proxmox_password                 = "CHANGE_ME"
+# proxmox_node                     = "pve"
+# proxmox_iso_storage_pool         = "local"
+# proxmox_insecure_skip_tls_verify = true
+# vm_disk_size_mb                  = 20480
+
+# --- QEMU ---
+# qemu_disk_size   = 20
+# qemu_output_dir  = "output-qemu"
+# qemu_accelerator = "kvm"
+
+# --- VMware ---
+# vm_disk_size_mb             = 20480
+# vmware_network_adapter_type = "vmxnet3"
+
+# --- VirtualBox ---
+# vm_disk_size_mb = 20480
+
+# --- AWS ---
+# aws_region         = "eu-west-1"
+# instance_type      = "t3.micro"
+# root_volume_size   = 20
+# install_ssm_agent  = true
+# ssm_install_method = "deb"

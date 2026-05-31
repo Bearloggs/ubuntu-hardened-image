@@ -1,0 +1,29 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+  network:
+    network:
+      version: 2
+      ethernets:
+        primary:
+          match:
+            name: "e*"
+          dhcp4: true
+  storage:
+    layout:
+      name: direct
+  identity:
+    hostname: ${hostname}
+    username: ${username}
+    password: "${identity_password_hash}"
+  ssh:
+    install-server: true
+    allow-pw: false
+    authorized-keys:
+      - ${ssh_public_key}
+  packages: []
+  package_update: false
+  package_upgrade: false
